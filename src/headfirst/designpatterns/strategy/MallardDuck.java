@@ -4,12 +4,13 @@ public class MallardDuck extends Duck {
 
 	public MallardDuck() {
 
-		quackBehavior = new Quack();
-		flyBehavior = new FlyWithWings();
+		setQuackBehavior(new Quack());
+		setFlyBehavior(new FlyWithWings());
+		setSwimBehavior(new SwimWithFeet());
 
 	}
 
 	public void display() {
-		System.out.println("I'm a real Mallard duck");
+		System.out.println("\nI'm a Mallard duck.");
 	}
 }

@@ -6,6 +6,7 @@ public class RubberDuck extends Duck {
 		flyBehavior = new FlyNoWay();
 		//quackBehavior = new Squeak();
 		quackBehavior = () -> System.out.println("Squeak");
+		setSwimBehavior(new Float());
 	}
 	
 	public RubberDuck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) {
@@ -14,6 +15,6 @@ public class RubberDuck extends Duck {
 	}
  
 	public void display() {
-		System.out.println("I'm a rubber duckie");
+		System.out.println("\nI'm a rubber duckie");
 	}
 }

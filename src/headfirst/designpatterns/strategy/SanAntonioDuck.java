@@ -12,6 +12,6 @@ public class SanAntonioDuck extends Duck {
 	}
 
 	public void display() {
-		System.out.println("\nI'm a Riverwalk duck.");
+		System.out.println("\nI'm a San Antonio duck.");
 	}
 }

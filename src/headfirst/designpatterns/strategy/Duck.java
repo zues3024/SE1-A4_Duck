@@ -3,6 +3,8 @@ package headfirst.designpatterns.strategy;
 public abstract class Duck {
 	FlyBehavior flyBehavior;
 	QuackBehavior quackBehavior;
+	SwimBehavior swimBehavior;
+	WalkBehavior walkBehavior;
 
 	public Duck() {
 	}
@@ -15,6 +17,10 @@ public abstract class Duck {
 		quackBehavior = qb;
 	}
 
+	public void setSwimBehavior(SwimBehavior sb) { swimBehavior = sb; }
+
+	public void setWalkBehavior(WalkBehavior wb) { walkBehavior = wb; }
+
 	abstract void display();
 
 	public void performFly() {
@@ -25,7 +31,8 @@ public abstract class Duck {
 		quackBehavior.quack();
 	}
 
-	public void swim() {
-		System.out.println("All ducks float, even decoys!");
-	}
+	public void performSwim() {swimBehavior.swim();}
+
+	public void performWalk() {walkBehavior.walk();}
+
 }
